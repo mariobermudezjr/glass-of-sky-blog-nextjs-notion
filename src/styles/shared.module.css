@@ -1,0 +1,12 @@
+.layout img {
+  margin: auto;
+  max-width: 98%;
+  display: block;
+  height: auto;
+}
+
+.layout h1,
+.layout h2,
+.layout h4 {
+  text-align: center;
+}

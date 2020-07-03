@@ -137,3 +137,11 @@
 .post :global(a + p) {
   margin-top: 0;
 }
+
+.authors {
+  margin-top: 0.5em;
+}
+
+.posted {
+  margin-top: 0.25em;
+}

@@ -44,10 +44,13 @@ export default () => (
   <>
     <Header titlePre="Contact" />
     <div className={sharedStyles.layout}>
-      <div className={contactStyles.avatar}>
-        <img src="/avatar.png" alt="avatar with gos logo" height={60} />
-      </div>
-      <h1 style={{ marginTop: 0 }}>Contact</h1>
+      <img
+        src="/avatar.png"
+        alt="avatar with gos logo"
+        height="100"
+        width="100"
+      />
+      <h1>Contact</h1>
       <div className={contactStyles.name}>Mario Bermudez JR</div>{' '}
       <div className={contactStyles.name}> Remote SWE in </div>
       <div className={contactStyles.nameStyled}>

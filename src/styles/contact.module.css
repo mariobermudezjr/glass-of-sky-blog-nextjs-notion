@@ -18,9 +18,10 @@
 }
 
 .avatar {
+  margin: auto;
+  max-width: 98%;
   display: block;
-  text-align: center;
-  margin: 1rem 0;
+  height: auto;
 }
 
 .avatar img {

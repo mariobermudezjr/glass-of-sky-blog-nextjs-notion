@@ -10,8 +10,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Contact', page: '/contact' },
 ]
 
-const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
-const logoUrl = 'https://ibb.co/mvPkT1Z'
+const logoUrl = 'https://i.ibb.co/dbHFM1C/avatar.png'
 
 export default ({ titlePre = '' }) => {
   const { pathname } = useRouter()

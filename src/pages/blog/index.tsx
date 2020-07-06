@@ -65,10 +65,7 @@ export default ({ posts = [], preview }) => {
       )}
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
         <h1>Glass of Sky Blog</h1>
-        <h4>
-          Powered by <ExtLink href="https://nextjs.org">Next.js</ExtLink> and{' '}
-          <ExtLink href="https://notion.so">Notion</ExtLink>
-        </h4>
+
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
@@ -101,6 +98,10 @@ export default ({ posts = [], preview }) => {
             </div>
           )
         })}
+        <h4>
+          Powered by <ExtLink href="https://nextjs.org">Next.js</ExtLink> and{' '}
+          <ExtLink href="https://notion.so">Notion</ExtLink>
+        </h4>
       </div>
     </>
   )

@@ -10,7 +10,7 @@ export default () => (
     <Header titlePre="Home" />
     <div className={sharedStyles.layout}>
       <img src="/avatar.png" height="100" width="100" alt="glass-of-sky-logo" />
-      <h1>Glass of Sky Blog</h1>
+      <h1>Glass of Sky</h1>
       <h2>a place where you can leave your ideas and thoughts </h2>
 
       {/* <Features /> */}

@@ -1,9 +1,14 @@
 import '../styles/global.css'
 import Footer from '../components/footer'
 
+import theme from '../theme'
+import { ThemeProvider } from 'theme-ui'
+
 export default ({ Component, pageProps }) => (
   <>
-    <Component {...pageProps} />
-    <Footer />
+    <ThemeProvider theme={theme}>
+      <Component {...pageProps} />
+      <Footer />
+    </ThemeProvider>
   </>
 )

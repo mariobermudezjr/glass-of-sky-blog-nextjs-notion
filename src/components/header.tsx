@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import ExtLink from './ext-link'
 import { useRouter } from 'next/router'
+import { useColorMode, Button } from 'theme-ui'
 import styles from '../styles/header.module.css'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
@@ -14,6 +15,7 @@ const logoUrl = 'https://i.ibb.co/dbHFM1C/avatar.png'
 
 export default ({ titlePre = '' }) => {
   const { pathname } = useRouter()
+  const [colorMode, setColorMode] = useColorMode()
 
   return (
     <header className={styles.header}>
@@ -44,6 +46,13 @@ export default ({ titlePre = '' }) => {
           </li>
         ))}
       </ul>
+      <Button
+        onClick={e => {
+          setColorMode(colorMode === 'light' ? 'dark' : 'light')
+        }}
+      >
+        {colorMode === 'light' ? 'Light' : 'Dark'}
+      </Button>
     </header>
   )
 }

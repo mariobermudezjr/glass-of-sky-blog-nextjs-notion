@@ -252,11 +252,12 @@ figure {
 }
 
 a {
-  color: #0070f3;
+  color: inherit;
   text-decoration: none;
 }
 a:hover {
-  color: #3291ff;
+  color: inherit;
+  opacity: 0.65;
 }
 
 .links {
@@ -306,7 +307,7 @@ h2 {
 }
 
 p {
-  color: #555;
+  color: inherit;
   font-weight: 400;
   font-size: 0.94rem;
   line-height: 1.7;

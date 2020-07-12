@@ -75,7 +75,7 @@ pre[class*='language-'] {
 }
 .token.punctuation,
 .token.operator {
-  color: #000;
+  color: inherit;
 }
 .token.url,
 .token.symbol,

@@ -40,11 +40,5 @@ export default {
         textDecoration: 'underline',
       },
     },
-    svg: {
-      color: 'primary',
-      ':hover': {
-        color: 'primary',
-      },
-    },
   },
 }

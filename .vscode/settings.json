@@ -1,0 +1,5 @@
+{
+  "deno.enable": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true
+}

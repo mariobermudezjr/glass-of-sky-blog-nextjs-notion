@@ -8,7 +8,6 @@ export default ({ Component, pageProps }) => (
   <>
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
-      <Footer />
     </ThemeProvider>
   </>
 )

@@ -4,6 +4,8 @@ import ExtLink from '../../components/ext-link'
 
 import blogStyles from '../../styles/blog.module.css'
 import sharedStyles from '../../styles/shared.module.css'
+import theme from '../../theme'
+import { useColorMode } from 'theme-ui'
 
 import {
   getBlogLink,
@@ -50,6 +52,7 @@ export async function getStaticProps({ preview }) {
 }
 
 export default ({ posts = [], preview }) => {
+  const [colorMode, setColorMode] = useColorMode()
   return (
     <body>
       <div className={blogStyles.gridContainer}>
@@ -78,33 +81,43 @@ export default ({ posts = [], preview }) => {
             )}
             {posts.map(post => {
               return (
-                <div className={blogStyles.postPreview} key={post.Slug}>
-                  <h3>
-                    <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                      <div className={blogStyles.titleContainer}>
-                        {!post.Published && (
-                          <span className={blogStyles.draftBadge}>Draft</span>
-                        )}
-                        <a>{post.Page}</a>
-                      </div>
-                    </Link>
-                  </h3>
-                  {post.Authors.length > 0 && (
-                    <div className="authors">By: {post.Authors.join(' ')}</div>
-                  )}
-                  {post.Date && (
-                    <div className="posted">
-                      Posted: {getDateStr(post.Date)}
+                <Link href="/blog/[slug]" as={getBlogLink(post.Slug)} passHref>
+                  <div
+                    className={blogStyles.postPreview}
+                    key={post.Slug}
+                    style={{
+                      backgroundColor:
+                        colorMode === 'light'
+                          ? theme.colors.cardBackground
+                          : theme.colors.modes.dark.cardBackground,
+                    }}
+                  >
+                    <div className={blogStyles.titleContainer}>
+                      {!post.Published && (
+                        <span className={blogStyles.draftBadge}>Draft</span>
+                      )}
+                      <h3>{post.Page}</h3>
                     </div>
-                  )}
-                  <p>
-                    {(!post.preview || post.preview.length === 0) &&
-                      'No preview available'}
-                    {(post.preview || []).map((block, idx) =>
-                      textBlock(block, true, `${post.Slug}${idx}`)
+                    {post.Authors.length > 0 && (
+                      <div className="authors">
+                        {' '}
+                        By: {post.Authors.join(' ')}
+                      </div>
                     )}
-                  </p>
-                </div>
+                    {post.Date && (
+                      <div className="posted">
+                        Posted: {getDateStr(post.Date)}
+                      </div>
+                    )}
+                    <p>
+                      {(!post.preview || post.preview.length === 0) &&
+                        'No preview available'}
+                      {(post.preview || []).map((block, idx) =>
+                        textBlock(block, true, `${post.Slug}${idx}`)
+                      )}
+                    </p>
+                  </div>
+                </Link>
               )
             })}
             <h4>

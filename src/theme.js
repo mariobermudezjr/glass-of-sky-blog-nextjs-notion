@@ -6,6 +6,7 @@ export default {
     background: '#ffffff',
     primary: '#0000000',
     secondary: '#000000',
+    cardBackground: '#C0C0C0',
     inherit: '#000000',
     modes: {
       dark: {
@@ -13,6 +14,7 @@ export default {
         background: '#222',
         primary: '#000000',
         secondary: '#66ffcc',
+        cardBackground: '#000000',
         inherit: '#7fffd4',
       },
     },

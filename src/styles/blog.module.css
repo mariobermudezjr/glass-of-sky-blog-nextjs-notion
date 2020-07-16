@@ -86,9 +86,12 @@
 }
 
 .postPreview {
+  border-radius: 0.75rem;
+  padding: 1rem;
   max-width: 600px;
-  margin: 10px auto;
+  margin: 16px auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 
 .postPreview:last-child {
@@ -98,7 +101,6 @@
 .postPreview h3,
 .post h1 {
   margin-bottom: 0;
-  cursor: pointer;
 }
 
 .post h1 {

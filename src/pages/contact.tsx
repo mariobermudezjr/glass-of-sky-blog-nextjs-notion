@@ -32,7 +32,7 @@ const contact2 = [
   {
     Comp: Twitter,
     alt: 'twitter icon',
-    link: 'https://twitter.com/lj_sartika',
+    link: 'https://twitter.com/sparklingstones',
   },
   {
     Comp: LinkedIn,
